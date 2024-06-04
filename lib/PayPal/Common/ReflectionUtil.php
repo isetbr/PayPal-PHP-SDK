@@ -149,7 +149,14 @@ class ReflectionUtil
     public static function getter($class, $propertyName)
     {
         return method_exists($class, "get" . ucfirst($propertyName)) ?
-            "get" . ucfirst($propertyName) :
-            "get" . preg_replace_callback("/([_\-\s]?([a-z0-9]+))/", "self::replace_callback", $propertyName);
+        "get" . ucfirst($propertyName) :
+        "get" . preg_replace_callback(
+            "/([_\-\s]?([a-z0-9]+))/",
+            [__CLASS__, 'replace_callback'],
+            $propertyName
+        );
+//        return method_exists($class, "get" . ucfirst($propertyName)) ?
+//            "get" . ucfirst($propertyName) :
+//            "get" . preg_replace_callback("/([_\-\s]?([a-z0-9]+))/", "self::replace_callback", $propertyName);
     }
 }
