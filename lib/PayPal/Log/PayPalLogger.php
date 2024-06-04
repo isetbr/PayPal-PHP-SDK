@@ -5,6 +5,7 @@ namespace PayPal\Log;
 use PayPal\Core\PayPalConfigManager;
 use Psr\Log\AbstractLogger;
 use Psr\Log\LogLevel;
+use Stringable;
 
 class PayPalLogger extends AbstractLogger
 {
