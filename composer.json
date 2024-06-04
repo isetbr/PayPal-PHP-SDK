@@ -1,5 +1,5 @@
 {
-  "name": "tarcisioq/api-sdk-php",
+  "name": "tarcisioq/paypal-api-sdk-php",
   "description": "Forked PayPal's PHP SDK for REST APIs with fixes for PHP 8.2",
   "keywords": ["paypal", "payments", "rest", "sdk"],
   "type": "library",
